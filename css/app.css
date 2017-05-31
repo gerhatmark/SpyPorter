@@ -1,0 +1,501 @@
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600');
+* {
+    margin: 0px;
+    padding: 0px;
+    border: none;
+    font-family: 'Source Sans Pro', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+    background: #3ca0cd;
+    background: -webkit-linear-gradient(top, #3ca0cd 0%, #1266a8 100%);
+}
+
+nav {
+    width: 100%;
+    height: 117px;
+    background: rgba(0, 0, 0, 0.5);
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-justify-content: space-around;
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
+}
+
+.logo img {
+    width: 216px;
+    height: 80px;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+    font-size: 36px;
+    font-weight: 100;
+    cursor: pointer;
+}
+
+a:hover {
+    color: #3ca0cd;
+}
+
+ul li {
+    display: inline-block;
+    margin: 20px;
+}
+
+.offcanvas {
+    transition: top 1s, background 1s;
+    min-width: 100%;
+    height: 300px;
+    background: transparent;
+    position: relative;
+    left: 0px;
+    top: -320px;
+    z-index: 3;
+}
+
+.off {
+    display: block;
+    text-align: center;
+    z-index: 4;
+    position: relative;
+    left: -5px;
+}
+
+.pagewrap {
+    width: 100%;
+    height: 60px;
+    background: rgba(0, 0, 0, 0.75);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 7;
+}
+
+label {
+    z-index: 6;
+    position: absolute;
+    top: 0px;
+    left: 20px;
+    color: white;
+    font-size: 36px;
+}
+
+#asd {
+    display: none;
+}
+
+#asd:checked+.pagewrap .offcanvas {
+    top: 40px;
+    background: rgba(0, 0, 0, 0.75);
+}
+
+
+/*main*/
+
+.Home {
+    margin-top: 110px;
+}
+
+.mainimage {
+    margin-top: 5.5%
+}
+
+.maintext {
+    color: white;
+    text-align: right;
+    font-size: 37px;
+    font-weight: 100;
+}
+
+.maintext h1 {
+    color: white;
+    font-size: 45px;
+    text-align: right;
+    font-weight: 200;
+}
+
+
+/*paypal*/
+
+.fokeret {
+    height: 82px;
+    width: 100%;
+    max-width: 576px;
+    border-radius: 100px;
+    background: white;
+    margin: auto;
+    position: relative;
+}
+
+.fokeret:hover .PayPal {
+    width: 100%;
+    max-width: 576px;
+    background: rgba(0, 0, 0, 0.7);
+}
+
+.PayPal {
+    position: relative;
+    transition: width 2s, background 3s;
+    height: 82px;
+    width: 212px;
+    border-radius: 100px;
+    background: rgba(0, 0, 0, 0.25);
+    z-index: 1;
+}
+
+.PayPal img {
+    position: absolute;
+    left: 30px;
+    margin-top: 10px;
+}
+
+.price {
+    height: 82px;
+    width: 138px;
+    border-radius: 100px;
+    text-align: center;
+    background: #D87615;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    margin-left: 500px;
+    z-index: 2;
+}
+
+.price p {
+    margin-top: 15px;
+    color: white;
+    font-size: 27px;
+    font-weight: 400;
+}
+
+.szoveg {
+    position: absolute;
+    top: 10px;
+    left: 255px;
+    letter-spacing: 3px;
+    color: #00325B;
+    font-size: 20px;
+    font-weight: 400;
+    text-align: center;
+}
+
+.szoveg p {
+    margin-bottom: 0px;
+}
+
+.szoveg::first-line {
+    color: #17A2FF;
+}
+
+.youtube {
+    background: red;
+    height: 800px;
+    margin-top: -100px;
+}
+
+.video {
+    width: 100%;
+    height: 100%;
+}
+
+.mobilenav {
+    margin: 5px;
+    position: absolute;
+    height: 50px;
+    right: 5px;
+}
+
+.asd {
+    height: 328px
+}
+
+.about {
+    color: white;
+    margin-top: 20px;
+}
+
+.about h1 {
+    margin-bottom: 23px;
+    font-size: 32px;
+}
+
+.about h2 {
+    margin-bottom: 36px;
+    font-size: 28px
+}
+
+.about figcaption {
+    margin: 22px 00px;
+}
+
+footer {
+    color: #95989A;
+    background: #202326;
+    font-size: 18px;
+    margin-top: 25px;
+}
+
+footer p {
+    margin-top: 25px
+}
+
+footer img {
+    margin-bottom: 20px
+}
+
+
+/*media query begin ---- DONT'T CHANGE THE ORDER 'CAUSE IT WILL FUCK UP EVERYTHING*/
+
+@media screen and (max-width: 928.5px) {
+    nav {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 39.9375em) {
+    .fokeret {
+        width: 90%;
+        transform: scale(0.85, 0.85);
+    }
+    .PayPal {
+        position: relative;
+        transition: width 2s, background 3s;
+        height: 82px;
+        width: 100%;
+        border-radius: 100px;
+        background: rgba(0, 0, 0, 0.7);
+        z-index: 1;
+    }
+    .szoveg {
+        display: none;
+    }
+    .maintext {
+        color: white;
+        text-align: center;
+        font-size: 22px;
+        font-weight: 100;
+    }
+    .maintext h1 {
+        color: white;
+        font-size: 32px;
+        text-align: center;
+        font-weight: 300;
+    }
+    .youtube {
+        margin-top: -200px;
+        width: 100%;
+        height: 300px;
+    }
+    /*media query begin ---- DONT'T CHANGE THE !IMPORRTANT TAG 'CAUSE IT WILL FUCK UP EVERYTHING AND I DON'T KNOW WHY I NEED TO USE THEM*/
+    .about h1 {
+        margin-bottom: 23px;
+        font-size: 24px !important
+    }
+    .about h2 {
+        font-size: 17px !important
+    }
+}
+
+@media screen and (max-width: 928.5px) {
+    .mainimage {
+        margin-top: 3%;
+    }
+    .maintext {
+        color: white;
+        text-align: center;
+        font-size: 22px;
+        font-weight: 100;
+    }
+    .maintext h1 {
+        color: white;
+        font-size: 32px;
+        text-align: center;
+        font-weight: 300;
+    }
+}
+
+@media screen and (min-width: 928.5px) {
+    .pagewrap {
+        display: none;
+    }
+    .Home {
+        margin-top: 160px;
+    }
+    .fokeret {
+        margin-top: 100px
+    }
+    footer .small-4 img {
+        width: 50px;
+        height: 50px;
+    }
+}
+
+.valaszto {
+    margin-top: 145px;
+    margin-bottom: 100px;
+}
+
+.hatter {
+    height: 87px;
+    background: #35768E;
+    border: 2px solid #263138;
+    border-radius: 100px;
+    font-size: 41px;
+    color: white;
+    text-transform: uppercase;
+}
+
+.hatter p {
+    margin-top: 10px;
+    font-weight: 100;
+    cursor: pointer;
+    color: #969696;
+}
+
+.valaszto1 {
+    color: #969696;
+}
+
+.valaszto1 p:hover {
+    color: white;
+    cursor: pointer
+}
+
+.valaszto2 {
+    color: #969696;
+}
+
+.valaszto2 p:hover {
+    color: white;
+    cursor: pointer
+}
+
+.elvalaszto {
+    height: 83px;
+    width: 2px;
+    background: #525B5D;
+    position: absolute;
+    left: 50%
+}
+
+@media screen and (max-width: 928.5px) {
+    .hatter {
+        height: 70px;
+        width: 90%;
+    }
+    .hatter p {
+        font-size: 30px;
+        margin-top: 8px
+    }
+    .elvalaszto {
+        height: 66px
+    }
+    .valaszto {
+        margin-top: 70px;
+    }
+    * {
+        text-align: center
+    }
+}
+
+.szabalyok {
+    color: white;
+    font-size: 25px;
+}
+
+.szabalyok h3 {
+    font-weight: 400;
+    font-size: 25px;
+}
+
+.szabalyok h4 {
+    font-weight: 200;
+    margin: 25px 0px;
+    font-size: 25px;
+}
+
+.szabalyok img {
+    height: 325px;
+    width: 325px;
+}
+
+.szabalyok .row {
+    margin-top: 60px;
+}
+
+.haromkep img {
+    width: 100px;
+    height: 100px;
+}
+
+.egykiskep img {
+    width: 100px;
+    height: 100px;
+}
+
+.ketkep img {
+    width: 100px;
+    height: 100px;
+    margin: 10px 0px;
+}
+
+.active p {
+    color: white
+}
+
+.unvisible {
+    display: none
+}
+
+.order {
+    color: honeydew;
+    margin-top: 250px;
+    margin-bottom: 336px
+}
+
+.hided {
+    visibility: hidden;
+}
+
+.show {
+    visibility: visible;
+}
+
+.hiba h2 {
+    background: rgba(100, 0, 0, 0.6);
+    width: 90%;
+    margin: 0 auto;
+    border-radius: 20px;
+    color: white;
+    font-weight: 100;
+    text-align: center
+}
+
+.hiba {
+    margin-bottom: 20px;
+}
+
+.payment {
+    margin-top: 100px;
+}
+
+.paybtn {
+    padding: 10px
+}
+
+input[type="radio"] {
+    margin: 20px
+}
